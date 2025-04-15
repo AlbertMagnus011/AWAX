@@ -1,3 +1,5 @@
+/* CSS Interface*/
+
 *{
     margin: 0;
     padding: 0;
@@ -5,8 +7,9 @@
     --color-mp:#B28756;
 }
 body{
-    font-family: 'Montserrat', Arial;
+    font-family: 'Montserrat', Arial, Helvetica;
     font-size: 13px;
+    overflow-x: hidden;
 }
 header{
     height: 100px;
@@ -53,7 +56,18 @@ header{
     border-bottom: 5px solid var(--color-mp);
     color: var(--color-mp);
 }
-
+.button{
+    display: inline-block;
+    background-color: var(--color-mp);
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 15px 50px;
+    margin-top: 30px;
+    border-radius: 20px;
+    color: #fff;
+}
 
 .banner{
     height: calc(100vh - 100px);
@@ -66,6 +80,7 @@ header{
 .banner .sliders {
     width: 1000vw;
     height:100%;
+    transition: 0.8s;
 }
 .banner .slide {
     width: 100vw;
@@ -95,18 +110,6 @@ header{
     margin-top: 20px;
     font-size: 22px;
 }
-.banner a {
-    display: block;
-    background-color: var(--color-mp);
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: 600;
-    text-decoration: none;
-    padding: 15px 50px;
-    margin-top: 30px;
-    border-radius: 20px;
-    color: #fff;
-}
 .banner .sliders_pointers{
     width: 100vw;
     height: 20px;
@@ -125,5 +128,232 @@ header{
     cursor: pointer;
 }
 .banner .pointer.active {
+    background-color: #b28756;
+}
+.default {
+    width: 100vw;
+    padding: 50px 0;
+}
+.default .section-title,
+.default .section-desc {
+    text-align: center;
+    text-transform: uppercase;
+}
+.default .section-title{
+    font-size: 20px;
+    font-weight: 700;
+}
+.default .section-desc{
+    font-size: 11px;
+    font-weight: 600;
+    color: #ccc;
+    margin: 10px 0 40px 0;
+}
+.default .section-body{
+    max-width: 1140px;
+    margin: auto;
+}
+.default.light{
+    background-color: #f7f7f7;
+}
+.default.light .section-title,
+.default.light .section-body{
+    color: #000;
+}
+.default.dark {
+    background-color: #000;
+}
+.default.dark .section-title,
+.default.dark .section-body {
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS unique areas*/
+
+.section-aboutus {
+    display: flex;
+}
+.section-aboutus--left {
+    flex:1.5;
+    padding-right: 30px;
+}
+.section-aboutus--left p {
+    font-size: 14px;
+    line-height: 24px;
+}
+.section-aboutus--right {
+    flex:1;
+}
+.section-aboutus--right img {
+    width: 100%;
+    box-shadow: 0px 0px 10px #333;
+}
+.section-services{
+    display: flex;
+}
+.section-service {
+    flex: 1;
+    text-align: center;
+    border-left: 1px solid #999;
+    padding: 15px;
+}
+.section-service:last-child{
+    border-right: 1px solid #999;
+}
+.section-service h4{
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.section-service p{
+    color: #777;
+    line-height: 20px;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+
+
+
+
+.section-projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-projects--filters {
+    border: 1px solid #ccc;
+    background-color: #eee;
+    border-radius: 30px;
+    display: inline-block;
+    padding: 0px 30px;
+}
+
+.section-projects--filters ul,
+.section-projects--filters li{
+    list-style: none;
+}
+.section-projects--filters li {
+    display: inline-block;
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-left: 1px solid #ccc;
+    color: #333;
+    border-bottom: 3px solid #eee;
+    cursor: pointer;
+}
+.section-projects--filters li:hover,
+.section-projects--filters li.active{
+    border-bottom: 3px solid var(--color-mp);
+}
+
+.section-projects--filters li:first-child{
+    border-left: 0;
+}
+.section-projects--photos {
+    width: 100vw;
+    max-width: 1140px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.section-projects--photo{
+    width: 280px;
+}
+.section-projects--photoarea {
+    margin: 10px;
+    width: 260px;
+    height: 160px;
+}
+.section-projects--photoarea img {
+    width: inherit;
+    height: inherit;
+}
+.section-projects--photoinfo{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: inherit;
+    height: inherit;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.section-projects--photoinfo h5 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.section-projects--photoarea:hover .section-projects--photoinfo{
+    display: flex;
+}
+.bg-team{
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+}
+.section-team-area {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 50px 0;
+}
+.section-team {
+    overflow-x: hidden;
+    max-width: 880px;
+    margin: auto;
+}
+.section-team .sliders {
+    width: 1000vw;
+    height:100%;
+    transition: 0.8s;
+}
+.section-team .slide {
+    width: 280px;
+    height:100%;
+    min-height: 300px;
+    display: inline-block;
+    background-color: #fff;
+    margin-right: 20px;
+}
+.section-team .slidearea {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+.section-team-area .sliders_pointers{
+    margin-top: 30px;
+    height: 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.section-team-area .pointer {
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--color-mp);
+    border-radius: 8px;
+    cursor: pointer;
+}
+.section-team-area .pointer.active {
     background-color: #b28756;
 }
