@@ -1,4 +1,6 @@
-const pointers = document.querySelectorAll('.banner .pointer');
+const pointersBanner = document.querySelectorAll('.banner .pointer');
+const pointersTeam = document.querySelectorAll('.section-team-area .pointer');
+const pointersReview = document.querySelectorAll('.section-review .pointer');
 const filters = document.querySelectorAll('.section-projects--filters ul li');
 const photos = [
     {title:'ABOUT',text:'Vestibulum id tempus', image:'./media/foto1.jpg', filter:'branding'},{title:'ABOUT',text:'Donation the impus', image:'./media/foto2.jpg', filter:'misc'},
@@ -12,10 +14,28 @@ let photosFiltered = photos;
 let divPhotos = document.querySelector('.section-projects--photos');
 
 
-pointers.forEach((pointer, index) =>{
-    pointer.addEventListener("click", () =>{
-        if(pointer.classList.contains('active') != true){
-            for(let p of pointers)p.classList.remove('active');
+pointersBanner.forEach((pointer, index) =>{
+    pointer.addEventListener("click", () => pointerControler(pointer, index))
+});
+pointersTeam.forEach((pointer, index) =>{
+    pointer.addEventListener("click", () => pointerControler(pointer, index)) 
+});
+pointersReview.forEach((pointer, index) =>{
+    pointer.addEventListener("click", () => pointerControler(pointer, index)) 
+});
+
+
+filters.forEach(filter =>{
+    filter.addEventListener('click', filterPhotos);  
+});
+
+
+showPhotos();
+
+function pointerControler(pointer, index){
+    if(pointer.classList.contains('active') != true){
+        if(pointer.getAttribute('data-p') === 'banner'){
+            for(let p of pointersBanner)p.classList.remove('active');
             pointer.classList.add('active');
             switch(index){
                 case 0:
@@ -28,16 +48,37 @@ pointers.forEach((pointer, index) =>{
                     document.querySelector('.banner .sliders').style.marginLeft = '-200vw';
                     break;
             }
+        }else if(pointer.getAttribute('data-p') === 'team'){
+            for(let p of pointersTeam)p.classList.remove('active');
+            pointer.classList.add('active');
+            switch(index){
+                case 0:
+                    document.querySelector('.section-team-area .sliders').style.marginLeft = '0';
+                    break;
+                case 1:
+                    document.querySelector('.section-team-area .sliders').style.marginLeft = '-300px';
+                    break;
+                case 2:
+                    document.querySelector('.section-team-area .sliders').style.marginLeft = '-600px';
+                    break;
+            }
+        }else if(pointer.getAttribute('data-p') === 'review'){
+            for(let p of pointersReview)p.classList.remove('active');
+            pointer.classList.add('active');
+            switch(index){
+                case 0:
+                    document.querySelector('.section-review .sliders').style.marginLeft = '0';
+                    break;
+                case 1:
+                    document.querySelector('.section-review .sliders').style.marginLeft = '-880px';
+                    break;
+                case 2:
+                    document.querySelector('.section-review .sliders').style.marginLeft = '-1760px';
+                    break;
+            }
         }
-    });
-});
-
-filters.forEach(filter =>{
-    filter.addEventListener('click', filterPhotos);  
-});
-
-
-showPhotos();
+    }
+}
 function showPhotos(){
     divPhotos.innerHTML = '';
     for(let i of photosFiltered){
