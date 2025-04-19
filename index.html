@@ -2,7 +2,7 @@
 <html lang="pt-br">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, user=scalable=0">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
         <title>Awax</title>
         <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,22 +12,23 @@
     </head>
     <body>
         <header>
-            <div class="header">
+            <div class="header" id="#home">
                 <div class="logo">
                     <img src="./assets/images/logo.png">
                 </div>
                 <div class="menu">
+                    <img class="menu-opener" src="./assets/images/menu.png" >
                     <nav>
                         <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="">about us</a></li>
-                            <li><a href="">services</a></li>
-                            <li><a href="">our projects</a></li>
-                            <li><a href="">our team</a></li>
-                            <li><a href="">happy clients</a></li>
-                            <li><a href="">price</a></li>
-                            <li><a href="">some facts</a></li>
-                            <li><a href="">contact us</a></li>
+                            <li class="active"><a href="#home">Home</a></li>
+                            <li><a href="#aboutus">about us</a></li>
+                            <li><a href="#services">services</a></li>
+                            <li><a href="#projects">our projects</a></li>
+                            <li><a href="#team">our team</a></li>
+                            <li><a href="#reviews">happy clients</a></li>
+                            <li><a href="#subscription">price</a></li>
+                            <li><a href="#facts">some facts</a></li>
+                            <li><a href="#contact">contact us</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -68,7 +69,7 @@
                 </div>
             </section>
             <section class="default light">
-                <div class="section-title">About us</div>
+                <div class="section-title" id="aboutus">About us</div>
                 <div class="section-desc">Who we are?</div>
                 <div class="section-body">
                     <div class="section-aboutus">
@@ -86,7 +87,7 @@
                 </div>
             </section>
             <section class="default dark">
-                <div class="section-title">Services</div>
+                <div class="section-title" id="services">Services</div>
                 <div class="section-desc">Services that we provide</div>
                 <div class="section-body">
                     <div class="section-services">
@@ -114,7 +115,7 @@
                 </div>
             </section>
             <section class="default light">
-                <div class="section-title">Our Projects</div>
+                <div class="section-title" id="projects">Our Projects</div>
                 <div class="section-desc">What we create</div>
                 <div class="section-body">
                     <div class="section-projects">
@@ -131,7 +132,7 @@
             </section>
             <section class="default dark bg-team">
                 <div class="section-team-area">
-                    <div class="section-title">Our Team</div>
+                    <div class="section-title" id="team">Our Team</div>
                     <div class="section-desc">Our co-workers</div>
                     <div class="section-body">
                         <div class="section-team">
@@ -216,9 +217,9 @@
                 </div>
             </section>
             <section class="default light">
-                <div class="section-title">Happy clients</div>
+                <div class="section-title" id="reviews">Happy clients</div>
                 <div class="section-desc">Client reviews</div>
-                <div class="section-body">
+                <div class="section-body review">
                     <div class="section-review">
                         <div class="sliders">
                             <div class="slide">
@@ -226,6 +227,7 @@
                                     <img class="section-review--avatar" src="./media/homem1.png" >
                                     <div class="section-review--name">John Doe</div>
                                     <div class="section-review--role">Head of PR Departament</div>
+                                    <div class="section-review--icon"><img src="./assets/images/quote.png" alt=""></div>
                                     <div class="section-review--text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti commodi repudiandae non ducimus harum aperiam, 
                                         beatae voluptatem nemo Facere, corrupti. Dolores quaerat asperiores laborum, delectus sunt nisi placeat voluptatem velit
                                         Lorem ipsum dolor, sit amet</div>
@@ -236,6 +238,7 @@
                                     <img class="section-review--avatar" src="./media/homem2.png" >
                                     <div class="section-review--name">Martin Silva</div>
                                     <div class="section-review--role">Head of Marketing Department</div>
+                                    <div class="section-review--icon"><img src="./assets/images/quote.png" alt=""></div>
                                     <div class="section-review--text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti commodi repudiandae non ducimus harum aperiam, 
                                         beatae voluptatem nemo Facere, corrupti. Dolores quaerat asperiores laborum, delectus sunt nisi placeat voluptatem velit
                                         Lorem ipsum dolor, sit amet</div>
@@ -246,6 +249,7 @@
                                     <img class="section-review--avatar" src="./media/mulher1.png" >
                                     <div class="section-review--name">Jessica Duarte</div>
                                     <div class="section-review--role">Head of RH Departament</div>
+                                    <div class="section-review--icon"><img src="./assets/images/quote.png" alt=""></div>
                                     <div class="section-review--text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti commodi repudiandae non ducimus harum aperiam, 
                                         beatae voluptatem nemo Facere, corrupti. Dolores quaerat asperiores laborum, delectus sunt nisi placeat voluptatem velit
                                         Lorem ipsum dolor, sit amet</div>
@@ -263,9 +267,391 @@
                     </div>
                 </div>
             </section>
+            <section class="default partners">
+                <div class="section-body">
+                    <div class="section-partners">
+                        <div class="section-partners--enterprise">
+                            <img src="./media/empresa1.png">
+                        </div>
+                        <div class="section-partners--enterprise">
+                            <img src="./media/empresa2.png">
+                        </div>
+                        <div class="section-partners--enterprise">
+                            <img src="./media/empresa3.png">
+                        </div>
+                        <div class="section-partners--enterprise">
+                            <img src="./media/empresa4.png">
+                        </div>
+                        <div class="section-partners--enterprise">
+                            <img src="./media/empresa5.png">
+                        </div>
+                        <div class="section-partners--enterprise">
+                            <img src="./media/empresa6.png">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="default light">
+                    <div class="section-title" id="subscription">Price</div>
+                    <div class="section-desc">Pricing table</div>
+                    <div class="section-body">
+                        <div class="section-subscription">
+                            <div class="section-subscription--plan">
+                                <div class="section-subscription--name">Express</div>
+                                <div class="section-subscription--price">$ 9.99</div>
+                                <div class="section-subscription--period">/ Month</div>
+                                <div class="section-subscription--desc">Tracking issues<br>--<br>Add bugs through email<br>--<br>
+                                Notification<br>--<br>Time tracking<br>--<br>Custom views</div>
+                                <a href="" class="button button--black">Choose</a>
+                            </div>
+                            <div class="section-subscription--plan">
+                                <div class="section-subscription--name">Standart</div>
+                                <div class="section-subscription--price">$ 14.99</div>
+                                <div class="section-subscription--period">/ Month</div>
+                                <div class="section-subscription--desc">Tracking issues<br>--<br>Add bugs through email<br>--<br>
+                                Notification<br>--<br>Time tracking<br>--<br>Custom views</div>
+                                <a href="" class="button button--black">Choose</a>
+                            </div>
+                            <div class="section-subscription--plan">
+                                <div class="section-subscription--name">Luxe</div>
+                                <div class="section-subscription--price">$ 19.99</div>
+                                <div class="section-subscription--period">/ Month</div>
+                                <div class="section-subscription--desc">Tracking issues<br>--<br>Add bugs through email<br>--<br>
+                                Notification<br>--<br>Time tracking<br>--<br>Custom views</div>
+                                <a href="" class="button button--black">Choose</a>
+                            </div>
+                            <div class="section-subscription--plan">
+                                <div class="section-subscription--name">Premium</div>
+                                <div class="section-subscription--price">$ 24.99</div>
+                                <div class="section-subscription--period">/ Month</div>
+                                <div class="section-subscription--desc">Tracking issues<br>--<br>Add bugs through email<br>--<br>
+                                Notification<br>--<br>Time tracking<br>--<br>Custom views</div>
+                                <a href="" class="button button--black">Choose</a>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <section class="default premium">
+                <div class="section-title">Premium</div>
+                <div class="section-desc">Even more features available</div>
+                <div class="section-body">
+                    <div class="section-premium">
+                        <div class="sliders">
+                            <div class="slide">
+                                <div class="slidearea">
+                                    <div class="section-premium--left">
+                                        <img src="./media/livros.png">
+                                    </div>
+                                    <div class="section-premium--right">
+                                        <div class="section-premium--feature">
+                                            <img src="./assets/images/check.png">
+                                            <div>
+                                                <div class="section-premium--title"><h2>First Feature</h2>
+                                                </div>
+                                                <div class="section-premium--desc">
+                                                    <p>Praesent metus urna, feugiat a placerat vel, elementum at leo.</p>
+                                                    <p>Quiosque vel fermentum ipsum. Nulla at facilisis est.</p>
+                                                    <p>-- FEATURE ONE</p>
+                                                    <p>-- FEATURE TWO</p>
+                                                    <p>-- FEATURE THREE</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="section-premium--feature">
+                                            <img src="./assets/images/check.png">
+                                            <div>
+                                                <div class="section-premium--title"><h2>Second feature</h2></div>
+                                                <div class="section-premium--desc">Praesent metus urna, feugiat a placerat vel</div>
+                                            </div>
+                                        </div>
+                                        <div class="section-premium--feature">
+                                            <img src="./assets/images/check.png">
+                                            <div>
+                                                <div class="section-premium--title"><h2>Third feature</h2></div>
+                                                <div class="section-premium--desc">Praesent metus urna, feugiat a placerat vel, elementum at leo.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="slidearea">
+                                    <div class="section-premium--left">
+                                        <img src="./media/livros.png">
+                                    </div>
+                                    <div class="section-premium--right">
+                                        <div class="section-premium--feature">
+                                            <img src="./assets/images/check.png">
+                                            <div>
+                                                <div class="section-premium--title"><h2>First Feature</h2>
+                                                </div>
+                                                <div class="section-premium--desc">
+                                                    <p>Praesent metus urna, feugiat a placerat vel, elementum at leo.</p>
+                                                    <p>Quiosque vel fermentum ipsum. Nulla at facilisis est.</p>
+                                                    <p>-- FEATURE ONE</p>
+                                                    <p>-- FEATURE TWO</p>
+                                                    <p>-- FEATURE THREE</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="section-premium--feature">
+                                            <img src="./assets/images/check.png">
+                                            <div>
+                                                <div class="section-premium--title"><h2>Second feature</h2></div>
+                                                <div class="section-premium--desc">Praesent metus urna, feugiat a placerat vel</div>
+                                            </div>
+                                        </div>
+                                        <div class="section-premium--feature">
+                                            <img src="./assets/images/check.png">
+                                            <div>
+                                                <div class="section-premium--title"><h2>Third feature</h2></div>
+                                                <div class="section-premium--desc">Praesent metus urna, feugiat a placerat vel, elementum at leo.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="slidearea">
+                                    <div class="section-premium--left">
+                                        <img src="./media/livros.png">
+                                    </div>
+                                    <div class="section-premium--right">
+                                        <div class="section-premium--feature">
+                                            <img src="./assets/images/check.png">
+                                            <div>
+                                                <div class="section-premium--title"><h2>First Feature</h2>
+                                                </div>
+                                                <div class="section-premium--desc">
+                                                    <p>Praesent metus urna, feugiat a placerat vel, elementum at leo.</p>
+                                                    <p>Quiosque vel fermentum ipsum. Nulla at facilisis est.</p>
+                                                    <p>-- FEATURE ONE</p>
+                                                    <p>-- FEATURE TWO</p>
+                                                    <p>-- FEATURE THREE</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="section-premium--feature">
+                                            <img src="./assets/images/check.png">
+                                            <div>
+                                                <div class="section-premium--title"><h2>Second feature</h2></div>
+                                                <div class="section-premium--desc">Praesent metus urna, feugiat a placerat vel</div>
+                                            </div>
+                                        </div>
+                                        <div class="section-premium--feature">
+                                            <img src="./assets/images/check.png">
+                                            <div>
+                                                <div class="section-premium--title"><h2>Third feature</h2></div>
+                                                <div class="section-premium--desc">Praesent metus urna, feugiat a placerat vel, elementum at leo.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sliders_pointers">
+                            <div class="pointer active" data-p="premium">
+                            </div>
+                            <div class="pointer" data-p="premium">
+                            </div>
+                            <div class="pointer" data-p="premium">
+                            </div>
+                        </div>
+                        <div class="section-premium--button">
+                            <a href="" class="button">Get in touch</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="default dark">
+                <div class="section-title" id="facts">Some facts</div>
+                <div class="section-desc">About our work</div>
+                <div class="section-body">
+                    <div class="section-facts">
+                        <div class="section-fact">
+                            <h3>1000</h3>
+                            <span></span>
+                            <h4>Design projects<br>released</h4>
+                            <p>Present meteus urna, feuglata placerat elementum data min</p>
+                        </div>
+                        <div class="section-fact">
+                            <h3>900</h3>
+                            <span></span>
+                            <h4>Photos</h4>
+                            <p>Present meteus urna, feuglata placerat elementum data min</p>
+                        </div>
+                        <div class="section-fact">
+                            <h3>500</h3>
+                            <span></span>
+                            <h4>Marketing<br>ideas</h4>
+                            <p>Present meteus urna, feuglata placerat elementum data min</p>
+                        </div>
+                        <div class="section-fact">
+                            <h3>100</h3>
+                            <span></span>
+                            <h4>Exhibitions</h4>
+                            <p>Present meteus urna, feuglata placerat elementum data min</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-share">
+                    <div class="section-share--title">
+                        <div class="section-share--icon">
+                            <img src="./assets/images/share.png">
+                        </div>
+                        <div class="section-share--legend">
+                            Tell about us:
+                        </div>
+                    </div>
+                    <div class="section-share--social">
+                        <div class="section-share--icon twitter">
+                            <img src="./assets/images/twitter.png">
+                        </div>
+                        <div class="section-share--legend">
+                            152
+                        </div>
+                    </div>
+                    <div class="section-share--social">
+                        <div class="section-share--icon linkedin">
+                            <img src="./assets/images/linkedin.png">
+                        </div>
+                        <div class="section-share--legend">
+                            31
+                        </div>
+                    </div>
+                    <div class="section-share--social">
+                        <div class="section-share--icon facebook">
+                            <img src="./assets/images/facebook.png">
+                        </div>
+                        <div class="section-share--legend">
+                            165
+                        </div>
+                    </div>
+                    <div class="section-share--social">
+                        <div class="section-share--icon googleplus">
+                            <img src="./assets/images/googleplus.png">
+                        </div>
+                        <div class="section-share--legend">
+                            22
+                        </div>
+                    </div>
+                    <div class="section-share--social">
+                        <div class="section-share--icon pinterest">
+                            <img src="./assets/images/pinterest.png">
+                        </div>
+                        <div class="section-share--legend">
+                            165
+                        </div>
+                    </div>           
+            </section>
+            <section class="default light">
+                <div class="section-title" id="contact">Contact us</div>
+                <div class="section-desc">Our agency located in melbourne, australia</div>
+                <div class="section-body">
+                    <div class="section-contact">
+                        <form method="post">
+                            <div class="section-contact--line one">
+                                <input type="text" placeholder="NAME">
+                                <input type="text" placeholder="EMAIL">
+                            </div>
+                            <div class="section-contact--line two">
+                                <input type="text" placeholder="SUBJECT">
+                            </div>
+                            <div class="section-contact--line">
+                                <textarea placeholder="MESSAGE"></textarea>
+                            </div>
+                            <a href="" class="button">Send message</a>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="section-map">
+                <div class="section-map-body">
+                <div class="section-map--info">
+                    <div class="section-map--info-item">
+                        <div class="section-map--info-item-icon">
+                            <img src="./assets/images/carta.png">
+                        </div>
+                        PO Box 16112 Collins Street West Victoria 8007 Australia
+                    </div>
+                    <div class="section-map--info-item">
+                        <div class="section-map--info-item-icon">
+                            <img src="./assets/images/localizacao.png">
+                        </div>
+                        121 King Street Melbourne Victoria 3000 Australia
+                    </div>
+                    <div class="section-map--info-item">
+                        <div class="section-map--info-item-icon">
+                            <img src="./assets/images/telefone.png">
+                        </div>
+                        +00 0 1234 5678
+                    </div>
+                    <div class="section-map--info-item">
+                        <div class="section-map--info-item-icon">
+                            <img src="./assets/images/arroba.png">
+                        </div>
+                        fakeemail@gmail.com
+                    </div>
+                    <div class="section-map--info-item">
+                        <div class="section-map--info-item-icon">
+                            <img src="./assets/images/web.png"> 
+                        </div>
+                        www.fakesite.com
+                     </div>
+                </div>
+            </div>
+            </section>
         </main>
-        <footer>
-
+        <footer class="footer">
+            <div class="footer-body">
+                <div class="footer-area">
+                    <div class="footer-area--socials">
+                        <div class="footer-area--socials-icons">
+                            <div class="footer-area--socials-icon">
+                                <img src="./assets/images/twitter.png">
+                            </div>
+                            <div class="footer-area--socials-icon">
+                                <img src="./assets/images/pinterest.png">
+                            </div>
+                            <div class="footer-area--socials-icon">
+                                <img src="./assets/images/linkedin.png">
+                            </div>
+                            <div class="footer-area--socials-icon">
+                                <img src="./assets/images/facebook.png">
+                            </div>
+                            <div class="footer-area--socials-icon">
+                                <img src="./assets/images/googleplus.png">
+                            </div>
+                            <div class="footer-area--socials-icon">
+                                ...
+                            </div>
+                        </div>
+                        <div class="footer-area--socials-copy">AWAX © 2016</div>
+                    </div>
+                    <div class="footer-area--text">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Non exercitationem voluptatum provident qui minus corporis blanditiis, 
+                            iusto eius in quod dolor nesciunt nobis, omnis cum alias obcaecati, 
+                            placeat assumenda neque. Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Error deleniti ad veritatis veniam ut, voluptatem eos ex voluptatibus voluptate 
+                            cumque eveniet soluta assumenda optio fugiat natus amet nesciunt laudantium molestiae.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum aspernatur distinctio eveniet 
+                            </p>
+                    </div>
+                    <div class="footer-area--subscribe">
+                        <div class="footer-area--subscribe-square">
+                            <form action="POST">
+                                <input type="email" placeholder="Email to subscribe">
+                                <a href="" class="button">Subscribe</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </footer>
         <script src="./assets/js/main.js"></script>
     </body>

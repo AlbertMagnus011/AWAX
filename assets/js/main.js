@@ -1,6 +1,8 @@
+const menu = document.querySelector('.menu-opener');
 const pointersBanner = document.querySelectorAll('.banner .pointer');
 const pointersTeam = document.querySelectorAll('.section-team-area .pointer');
 const pointersReview = document.querySelectorAll('.section-review .pointer');
+const pointersPremium = document.querySelectorAll('.section-premium .pointer');
 const filters = document.querySelectorAll('.section-projects--filters ul li');
 const photos = [
     {title:'ABOUT',text:'Vestibulum id tempus', image:'./media/foto1.jpg', filter:'branding'},{title:'ABOUT',text:'Donation the impus', image:'./media/foto2.jpg', filter:'misc'},
@@ -13,7 +15,10 @@ const photos = [
 let photosFiltered = photos;
 let divPhotos = document.querySelector('.section-projects--photos');
 
-
+menu.addEventListener('click', () =>{
+    let nav = document.querySelector('nav');
+    nav.style.display === 'none' ? nav.style.display = 'block' : nav.style.display = 'none';
+})
 pointersBanner.forEach((pointer, index) =>{
     pointer.addEventListener("click", () => pointerControler(pointer, index))
 });
@@ -23,7 +28,9 @@ pointersTeam.forEach((pointer, index) =>{
 pointersReview.forEach((pointer, index) =>{
     pointer.addEventListener("click", () => pointerControler(pointer, index)) 
 });
-
+pointersPremium.forEach((pointer, index) =>{
+    pointer.addEventListener("click", () => pointerControler(pointer, index)) 
+});
 
 filters.forEach(filter =>{
     filter.addEventListener('click', filterPhotos);  
@@ -70,10 +77,24 @@ function pointerControler(pointer, index){
                     document.querySelector('.section-review .sliders').style.marginLeft = '0';
                     break;
                 case 1:
-                    document.querySelector('.section-review .sliders').style.marginLeft = '-880px';
+                    document.querySelector('.section-review .sliders').style.marginLeft = '-100vw';
                     break;
                 case 2:
-                    document.querySelector('.section-review .sliders').style.marginLeft = '-1760px';
+                    document.querySelector('.section-review .sliders').style.marginLeft = '-200vw';
+                    break;
+            }
+        }else if(pointer.getAttribute('data-p') === 'premium'){
+            for(let p of pointersPremium)p.classList.remove('active');
+            pointer.classList.add('active');
+            switch(index){
+                case 0:
+                    document.querySelector('.section-premium .sliders').style.marginLeft = '0vw';
+                    break;
+                case 1:
+                    document.querySelector('.section-premium .sliders').style.marginLeft = '-100vw';
+                    break;
+                case 2:
+                    document.querySelector('.section-premium .sliders').style.marginLeft = '-200vw';
                     break;
             }
         }
