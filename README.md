@@ -30,7 +30,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O projeto apresenta um template responsivo utilizando HTML, CSS e Javascript, apenas para fins didaticos.
 
-- [Acesse o projeto finalizado, online](https://albertmagnus011.github.io/awax/)
+- [Acesse o projeto finalizado, online](https://albertmagnus011.github.io/AWAX/)
 
 ---
 
