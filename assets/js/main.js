@@ -15,27 +15,9 @@ const photos = [
 let photosFiltered = photos;
 let divPhotos = document.querySelector('.section-projects--photos');
 
-menu.addEventListener('click', () =>{
-    let nav = document.querySelector('nav');
-    nav.style.display === 'none' ? nav.style.display = 'block' : nav.style.display = 'none';
-})
-pointersBanner.forEach((pointer, index) =>{
-    pointer.addEventListener("click", () => pointerControler(pointer, index))
-});
-pointersTeam.forEach((pointer, index) =>{
-    pointer.addEventListener("click", () => pointerControler(pointer, index)) 
-});
-pointersReview.forEach((pointer, index) =>{
-    pointer.addEventListener("click", () => pointerControler(pointer, index)) 
-});
-pointersPremium.forEach((pointer, index) =>{
-    pointer.addEventListener("click", () => pointerControler(pointer, index)) 
-});
 
-filters.forEach(filter =>{
-    filter.addEventListener('click', filterPhotos);  
-});
-
-
+initEvents();
 showPhotos();
+
+
 

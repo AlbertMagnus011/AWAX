@@ -1,3 +1,25 @@
+function initEvents(){
+    menu.addEventListener('click', () =>{
+        let nav = document.querySelector('nav');
+        nav.style.display === 'none' ? nav.style.display = 'block' : nav.style.display = 'none';
+    })
+    pointersBanner.forEach((pointer, index) =>{
+        pointer.addEventListener("click", () => pointerControler(pointer, index))
+    });
+    pointersTeam.forEach((pointer, index) =>{
+        pointer.addEventListener("click", () => pointerControler(pointer, index)) 
+    });
+    pointersReview.forEach((pointer, index) =>{
+        pointer.addEventListener("click", () => pointerControler(pointer, index)) 
+    });
+    pointersPremium.forEach((pointer, index) =>{
+        pointer.addEventListener("click", () => pointerControler(pointer, index)) 
+    });
+    filters.forEach(filter =>{
+        filter.addEventListener('click', filterPhotos);  
+    });
+}
+
 function pointerControler(pointer, index){
     if(pointer.classList.contains('active') != true){
         if(pointer.getAttribute('data-p') === 'banner'){
